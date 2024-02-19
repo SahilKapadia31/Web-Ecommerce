@@ -1,0 +1,260 @@
+[
+  {
+    "category": "Popular",
+    "items": [
+      {
+        "name": "Nothing",
+        "models": ["Nothing Phone 1", "Nothing Phone 2"]
+      },
+      {
+        "name": "Xiaomi",
+        "models": ["Poco X4 Pro 5G", "Poco M4 5G", "Poco M4 Pro 5G"]
+      },
+      {
+        "name": "Oneplus",
+        "models": ["OnePlus Nord 2T 5G", "OnePlus 9R", "OnePlus Nord N20 SE"]
+      },
+      {
+        "name": "Apple",
+        "models": ["iPhone 15 Pro max", "iPhone 15 Pro", "iPhone 15 Plus"]
+      },
+      {
+        "name": "Samsung",
+        "models": [
+          "Samsung Galaxy S21 fe 5G",
+          "Samsung Galaxy S20 FE",
+          "Samsung Galaxy Note 10 lite"
+        ]
+      },
+      {
+        "name": "Realme",
+        "models": ["Realme 10 Pro+ 5G", "Realme 10 Pro 5G", "Realme 8 5G"]
+      },
+      {
+        "name": "Vivo",
+        "models": ["Vivo V25 Pro", "Vivo S1", "Vivo IQOO 11"]
+      }
+    ]
+  },
+  {
+    "category": "HARDCORE CAMERA",
+    "items": [
+      {
+        "name": "Nothing",
+        "models": ["Phone 1", "Phone 2"]
+      },
+      {
+        "name": "Apple",
+        "models": ["iPhone 15 Pro max", "iPhone 15 Pro", "iPhone 15 Plus"]
+      },
+      {
+        "name": "akoof.com/mobile-covers-india"
+      },
+      {
+        "name": "Xiaomi",
+        "models": ["Poco X4 Pro 5G", "Poco M4 5G", "Poco M4 Pro 5G"]
+      },
+      {
+        "name": "Samsung",
+        "models": [
+          "Samsung Galaxy S21 fe 5G",
+          "Samsung Galaxy S20 FE",
+          "Samsung Galaxy Note 10 lite"
+        ]
+      },
+      {
+        "name": "Oneplus",
+        "models": ["OnePlus Nord 2T 5G", "OnePlus 9R", "OnePlus Nord N20 SE"]
+      },
+      {
+        "name": "Realme",
+        "models": ["Realme 10 Pro+ 5G", "Realme 10 Pro 5G", "Realme 8 5G"]
+      },
+      {
+        "name": "Vivo",
+        "models": ["Vivo V25 Pro", "Vivo S1", "Vivo IQOO 11"]
+      }
+    ]
+  },
+  {
+    "category": "OTHER BRANDS",
+    "items": [
+      {
+        "name": "Oppo"
+      },
+      {
+        "name": "Huawei"
+      },
+      {
+        "name": "Moto"
+      },
+      {
+        "note": "See all devices"
+      }
+    ]
+  },
+  {
+    "category": "WOMEN",
+    "items": [
+      {
+        "name": "Topwear",
+        "types": [
+          "Printed T-Shirts",
+          "Boyfriend T-Shirts",
+          "Oversized T-Shirts",
+          "Classic Fit T-Shirts",
+          "Half Sleeves T-Shirts",
+          "Plain T-Shirts",
+          "Full Sleeve T-Shirts",
+          "Fashion Tops",
+          "Co-ord Sets",
+          "Dresses",
+          "Kurtis",
+          "Shirts, ",
+          "Plus Size Topwear",
+          "Customize T-Shirts, ",
+          "T-shirt Combos",
+          "Sweatshirts & Hoodies",
+          "Jackets",
+          "Sweaters",
+          "All Topwear"
+        ]
+      },
+      {
+        "name": "Bottomwear",
+        "types": [
+          "Joggers",
+          "Jeans",
+          "Parachute pants",
+          "Cargos",
+          "Co-ord Sets",
+          "Pajamas",
+          "Trousers & Pants",
+          "Shorts",
+          "Boxer Shorts",
+          "Plus Size Bottomwear",
+          "All Bottomwear"
+        ]
+      },
+      {
+        "name": "Winterwear",
+        "types": ["Jackets", "Sweatshirts & Hoodies", "Sweaters", "Joggers"]
+      },
+      {
+        "name": "Footwear",
+        "types": ["Casual Shoes", "Sliders"]
+      },
+      {
+        "name": "Accessories",
+        "types": [
+          "Mobile Covers",
+          "Bags & Backpacks",
+          "Sling bags",
+          "Caps",
+          "Casual Shoes",
+          "Sliders"
+        ]
+      },
+      {
+        "name": "Plus Size",
+        "types": [
+          "Topwear",
+          "Sweatshirts & hoodies",
+          "Jackets",
+          "Bottomwear",
+          "Dresses"
+        ]
+      },
+      {
+        "name": "Loungewear",
+        "types": ["Shorts", "Pajamas", "Lounge Wear", "Boxers"]
+      }
+    ]
+  },
+  {
+    "category": "MEN",
+    "items": [
+      {
+        "name": "Topwear",
+        "types": [
+          "Printed T-Shirts",
+          "Oversized T-Shirts",
+          "Classic Fit T-Shirts",
+          "Plain T-Shirts",
+          "Half Sleeves T-Shirts",
+          "Full Sleeve T-Shirts",
+          "Polo T-Shirts",
+          "Vests",
+          "Shirts",
+          "Co-ord Sets",
+          "Kurtis",
+          "Plus Size Topwear",
+          "Customize T-Shirts, ",
+          "T-shirt Combos",
+          "Sweatshirts & Hoodies",
+          "Jackets",
+          "Sweaters",
+          "All Topwear"
+        ]
+      },
+      {
+        "name": "Bottomwear",
+        "types": [
+          "Joggers",
+          "Jeans",
+          "Pajamas",
+          "Trousers & Pants",
+          "Cargos",
+          "Co-ord Sets",
+          "Shorts",
+          "Boxer",
+          "Combos",
+          "Plus Size Bottomwear",
+          "All Bottomwear"
+        ]
+      },
+      {
+        "name": "Winterwear",
+        "types": [
+          "Sweatshirts & Hoodies",
+          "Jackets",
+          "Sweaters",
+          "Full Sleeve T-Shirts",
+          "Joggers",
+          "Plus Size"
+        ]
+      },
+      {
+        "name": "Footwear",
+        "types": ["Sliders", "Clogs", "Casual Shoes"]
+      },
+      {
+        "name": "Accessories",
+        "types": [
+          "Mobile Covers",
+          "Bags & Backpacks",
+          "Sling bags",
+          "Caps",
+          "Sliders",
+          "Clogs",
+          "Casual Shoes"
+        ]
+      },
+      {
+        "name": "Plus Size",
+        "types": [
+          "T-Shirts",
+          "Shirts",
+          "Jackets",
+          "Sweatshirts & hoodies",
+          "Bottomwear",
+          "Jeans"
+        ]
+      },
+      {
+        "name": "Innerwear & Loungewear",
+        "types": ["Vests", "Boxers", "Pajamas"]
+      }
+    ]
+  }
+]
