@@ -1,0 +1,21 @@
+.fs-7 {
+    font-size: 13px !important;
+}
+.fs-14px {
+    font-size: 14px !important;
+}
+
+.mega-menu{
+    left: 8%;
+    display: block;
+    z-index: 999 !important;
+}
+
+.mobile-cover:hover ~ .mega-menu {
+    display: block;
+}
+
+.mega-menu:hover {
+    display: block;
+    
+}

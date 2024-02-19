@@ -1,0 +1,22 @@
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+
+/* Track */
+::-webkit-scrollbar-track {
+    /* background: grey; */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: gainsboro;
+    border-radius: 100px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background :turquoise;
+}
+
