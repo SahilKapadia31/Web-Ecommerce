@@ -7,45 +7,42 @@
 
 .mega-menu{
     left: 8%;
-    display: none;
-    z-index: 999 !important;
+    display: block;
 }
 
-.mobile-cover:hover ~ .mega-menu {
+/* .mobile-cover:hover ~ .mega-menu {
     display: block;
 }
 
 .mega-menu:hover {
     display: block;
     
-}
+} */
 
 .mega-menu-women{
     left: 8%;
-    display: none;
-    z-index: 999 !important;
+    display: block;
 }
 
-.women:hover ~ .mega-menu-women {
+/* .women:hover ~ .mega-menu-women {
     display: block;
 }
 
 .mega-menu-women:hover {
     display: block;
     
-}
+} */
 
 .mega-menu-men{
     left: 8%;
-    display: none;
-    z-index: 999 !important;
+    display: block;
 }
 
-.men:hover ~ .mega-menu-men{
+/* .men:hover ~ .mega-menu-men{
     display: block;
 }
 
 .mega-menu-men:hover {
     display: block;
     
-}
+} */

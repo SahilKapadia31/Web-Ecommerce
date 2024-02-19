@@ -37,46 +37,6 @@
     ]
   },
   {
-    "category": "HARDCORE CAMERA",
-    "items": [
-      {
-        "name": "Nothing",
-        "models": ["Phone 1", "Phone 2"]
-      },
-      {
-        "name": "Apple",
-        "models": ["iPhone 15 Pro max", "iPhone 15 Pro", "iPhone 15 Plus"]
-      },
-      {
-        "name": "akoof.com/mobile-covers-india"
-      },
-      {
-        "name": "Xiaomi",
-        "models": ["Poco X4 Pro 5G", "Poco M4 5G", "Poco M4 Pro 5G"]
-      },
-      {
-        "name": "Samsung",
-        "models": [
-          "Samsung Galaxy S21 fe 5G",
-          "Samsung Galaxy S20 FE",
-          "Samsung Galaxy Note 10 lite"
-        ]
-      },
-      {
-        "name": "Oneplus",
-        "models": ["OnePlus Nord 2T 5G", "OnePlus 9R", "OnePlus Nord N20 SE"]
-      },
-      {
-        "name": "Realme",
-        "models": ["Realme 10 Pro+ 5G", "Realme 10 Pro 5G", "Realme 8 5G"]
-      },
-      {
-        "name": "Vivo",
-        "models": ["Vivo V25 Pro", "Vivo S1", "Vivo IQOO 11"]
-      }
-    ]
-  },
-  {
     "category": "OTHER BRANDS",
     "items": [
       {
