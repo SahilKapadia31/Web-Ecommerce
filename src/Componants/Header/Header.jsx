@@ -10,9 +10,11 @@ const Header = () => {
 
     const navItems = ["Men", "Women", "Mobile Covers"]
 
-    const handleTabHover = (tab) => {
-        setActiveTab(tab)
-    }
+    const handleTabHover = (item) => {
+        setActiveTab(item);
+    };
+
+    console.log(activeTab);
 
     return (
         <div className="">
@@ -25,8 +27,9 @@ const Header = () => {
                         {navItems && navItems.map((item, i) =>
                             <Nav className="text-uppercase fs-7" key={i} onMouseEnter={() => handleTabHover(item)} onMouseLeave={() => handleTabHover('')}>
                                 <Nav.Link className="text-black p-3 men">{item}</Nav.Link>
-                                <Megamenu activeTab={activeTab} />
-                            </Nav>)}
+                                <Megamenu activeTab={activeTab === item ? activeTab : ''} />
+                            </Nav>
+                        )}
                     </div>
                     <Form className="w-50">
                         <Row className=" justify-content-end">

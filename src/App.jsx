@@ -1,7 +1,7 @@
 import './App.css'
-import Header from './Componants/Header'
+import Header from './Componants/Header/Header'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import CategoryBar from './Componants/CategoryBar';
+import CategoryBar from './Componants/Header/CategoryBar';
 
 
 

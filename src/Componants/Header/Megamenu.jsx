@@ -148,7 +148,7 @@ const Megamenu = ({ activeTab }) => {
                                             {data && data.map((x, i) =>
                                                 <div className="row g-3">
                                                     <div className="col-sm-12 text-secondary fw-semibold text-opacity-50" >
-                                                        {x.category == 'Popular' ? x.category : ''}
+                                                        {x.category == 'Popular' ? x.category : ""}
                                                     </div>
                                                     <div className="d-flex flex-wrap justify-content-end ps-0 row-gap-4 text-capitalize" key={i}>
                                                         {x.items && x.category == "Popular" && x.items.map((item, j) =>
