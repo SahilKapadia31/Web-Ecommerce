@@ -13,15 +13,11 @@ const Header = ({ productCount }) => {
         setAddToCart(JSON.parse(localStorage.getItem('counter')))
     }, [productCount])
 
-
-
     const navItems = ["Men", "Women", "Mobile Covers"]
 
     const handleTabHover = (item) => {
         setActiveTab(item);
     };
-
-
 
     return (
         <div className="">
@@ -59,9 +55,6 @@ const Header = ({ productCount }) => {
                     </div>
                 </Container>
             </Navbar>
-
-
-
         </div >
     );
 };

@@ -6,6 +6,7 @@ import Listing from './Componants/Body/Listing';
 import Home from './Componants/Home'
 import Productpage from './Componants/Body/Productpage';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Login from './Componants/Login/Login';
 
 
 
@@ -16,7 +17,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home />}></Route>
-          <Route path='/Productpage/:id' element={<Productpage />}></Route>
+          <Route path='/productpage/:id' element={<Productpage />}></Route>
+          <Route path='/login' element={<Login />}></Route>
         </Routes>
       </BrowserRouter>
     </>

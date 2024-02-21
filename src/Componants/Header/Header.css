@@ -8,6 +8,7 @@
 .mega-menu{
     left: 8%;
     display: block;
+    z-index: 9999;
 }
 
 /* .mobile-cover:hover ~ .mega-menu {
@@ -22,6 +23,7 @@
 .mega-menu-women{
     left: 8%;
     display: block;
+    z-index: 9999;
 }
 
 /* .women:hover ~ .mega-menu-women {
@@ -36,6 +38,7 @@
 .mega-menu-men{
     left: 8%;
     display: block;
+    z-index: 9999;
 }
 
 /* .men:hover ~ .mega-menu-men{
