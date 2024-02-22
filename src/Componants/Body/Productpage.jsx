@@ -14,9 +14,9 @@ const Productpage = () => {
     let productImg = Products[Id]
 
     const handleClick = () => {
-        let prevCount = JSON.parse(sessionStorage.getItem('counter'))
+        let prevCount = JSON.parse(localStorage.getItem('counter'))
         setCounter(prevCount + 1)
-        sessionStorage.setItem('counter', JSON.stringify(prevCount + 1))
+        localStorage.setItem('counter', JSON.stringify(prevCount + 1))
     }
     return (
         <div>

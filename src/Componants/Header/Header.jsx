@@ -1,18 +1,22 @@
 import React, { useState, useEffect } from "react";
 import "./Header.css";
 import { Navbar, Nav, Container, Form, Row, Col } from "react-bootstrap";
-import CategoryBar from "./CategoryBar";
 import Megamenu from "./Megamenu";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Header = ({ productCount }) => {
 
     const [activeTab, setActiveTab] = useState('')
     const [addToCart, setAddToCart] = useState()
+    const navigate = useNavigate()
 
     useEffect(() => {
-        setAddToCart(JSON.parse(sessionStorage.getItem('counter')))
+        setAddToCart(JSON.parse(localStorage.getItem('counter')))
     }, [productCount])
+
+    const handleHome = () => {
+        navigate('/')
+    }
 
     const navItems = ["Men", "Women", "Mobile Covers"]
 
@@ -25,7 +29,7 @@ const Header = ({ productCount }) => {
             <Navbar bg="white" data-bs-theme="white" className="border-bottom border-dark-subtle position-relative p-0">
                 <Container>
                     <Navbar.Brand className="me-4">
-                        <img src="/bwkf.svg" width="147" height="42" className="d-inline-block align-top" alt="React Bootstrap logo" />
+                        <img src="/bwkf.svg" width="147" height="42" className="d-inline-block align-top cursor-pointer" alt="React Bootstrap logo" onClick={handleHome} />
                     </Navbar.Brand>
                     <div className=" d-flex w-50 fw-medium">
                         {navItems && navItems.map((item, i) =>
@@ -48,7 +52,7 @@ const Header = ({ productCount }) => {
                     </Form>
                     <hr className="vr h-100 mx-3" />
                     <div className="fs-7 d-flex align-items-center gap-3">
-                        <Link className="text-decoration-none" to={'/login'}><span className="text-black fw-medium" style={{ cursor: 'pointer' }}>Login</span></Link>
+                        <Link className="text-decoration-none" to={'/login'}><span className="text-black fw-medium cursor-pointer">Login</span></Link>
                         <i class="bi bi-heart fs-5"></i>
                         <i class="bi bi-bag fs-5 position-relative">
                             <span class="badge bg-dark text-white rounded-pill position-absolute">{addToCart ? addToCart : 0}</span>

@@ -15,7 +15,7 @@ const Listing = () => {
             <div className="d-flex flex-wrap ">
                 {Products && Products.map((product, i) =>
                     <div div className="img" key={i} onClick={() => handleClick(i)}>
-                        <img src={product.img} className='img-fluid' style={{ width: "226px", cursor: 'pointer' }} alt="" />
+                        <img src={product.img} className='img-fluid cursor-pointer' style={{ width: "226px" }} alt="" />
                     </div>
                 )}
             </div>
