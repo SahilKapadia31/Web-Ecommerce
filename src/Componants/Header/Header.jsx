@@ -3,6 +3,7 @@ import "./Header.css";
 import { Navbar, Nav, Container, Form, Row, Col } from "react-bootstrap";
 import CategoryBar from "./CategoryBar";
 import Megamenu from "./Megamenu";
+import { Link } from "react-router-dom";
 
 const Header = ({ productCount }) => {
 
@@ -10,7 +11,7 @@ const Header = ({ productCount }) => {
     const [addToCart, setAddToCart] = useState()
 
     useEffect(() => {
-        setAddToCart(JSON.parse(localStorage.getItem('counter')))
+        setAddToCart(JSON.parse(sessionStorage.getItem('counter')))
     }, [productCount])
 
     const navItems = ["Men", "Women", "Mobile Covers"]
@@ -24,7 +25,7 @@ const Header = ({ productCount }) => {
             <Navbar bg="white" data-bs-theme="white" className="border-bottom border-dark-subtle position-relative p-0">
                 <Container>
                     <Navbar.Brand className="me-4">
-                        <img src="public/bwkf.svg" width="147" height="42" className="d-inline-block align-top" alt="React Bootstrap logo" />
+                        <img src="/bwkf.svg" width="147" height="42" className="d-inline-block align-top" alt="React Bootstrap logo" />
                     </Navbar.Brand>
                     <div className=" d-flex w-50 fw-medium">
                         {navItems && navItems.map((item, i) =>
@@ -47,7 +48,7 @@ const Header = ({ productCount }) => {
                     </Form>
                     <hr className="vr h-100 mx-3" />
                     <div className="fs-7 d-flex align-items-center gap-3">
-                        <span className="text-black">Login</span>
+                        <Link className="text-decoration-none" to={'/login'}><span className="text-black fw-medium" style={{ cursor: 'pointer' }}>Login</span></Link>
                         <i class="bi bi-heart fs-5"></i>
                         <i class="bi bi-bag fs-5 position-relative">
                             <span class="badge bg-dark text-white rounded-pill position-absolute">{addToCart ? addToCart : 0}</span>
