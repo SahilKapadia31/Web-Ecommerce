@@ -8,6 +8,7 @@ import Productpage from './Componants/Body/Productpage';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Login from './Componants/Login & Signup/Login';
 import Signup from './Componants/Login & Signup/Signup';
+import Categories from './Componants/Body/Categories';
 
 
 
@@ -21,6 +22,7 @@ function App() {
           <Route path='/productpage/:id' element={<Productpage />}></Route>
           <Route path='/login' element={<Login />}></Route>
           <Route path='/signup' element={<Signup />}></Route>
+          <Route path='/categories/:type' element={<Categories />}></Route>
         </Routes>
       </BrowserRouter>
     </>

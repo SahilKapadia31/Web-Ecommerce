@@ -1,18 +1,25 @@
 import React from 'react'
+import Categories from '../Body/Categories'
+import { Link } from 'react-router-dom'
 
 const CategoryBar = () => {
+
+    const handleClick = (Category) => {
+
+    }
+
     return (
         <div className="container-xxl">
-            <div className=' px-4 py-2'>
+            <div className='px-4 py-2'>
                 <nav className="nav text-uppercase justify-content-between">
-                    <a className="nav-link text-black">Shop Now</a>
-                    <a className="nav-link text-black">Men</a>
-                    <a className="nav-link text-black">Women</a>
-                    <a className="nav-link text-black">Accessories</a>
-                    <a className="nav-link text-black">Heavy Duty</a>
-                    <a className="nav-link text-black">Bewakoof Air</a>
-                    <a className="nav-link text-black">Official Merch</a>
-                    <a className="nav-link text-black">Plus Size</a>
+                    <a className="nav-link text-black cursor-pointer">Shop Now</a>
+                    <Link to={'/categories/male_items'} className="nav-link text-black cursor-pointer">Men</Link>
+                    <Link to={'/categories/female_items'} className="nav-link text-black cursor-pointer">Women</Link>
+                    <a className="nav-link text-black cursor-pointer">Accessories</a>
+                    <a className="nav-link text-black cursor-pointer">Heavy Duty</a>
+                    <a className="nav-link text-black cursor-pointer">Bewakoof Air</a>
+                    <a className="nav-link text-black cursor-pointer">Official Merch</a>
+                    <a className="nav-link text-black cursor-pointer">Plus Size</a>
                 </nav>
             </div>
         </div>

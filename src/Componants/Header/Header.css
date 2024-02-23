@@ -12,10 +12,10 @@
 }
 
 /* .mobile-cover:hover ~ .mega-menu {
-    display: block;
-}
+    border-bottom: 2px solid yellow;
+} */
 
-.mega-menu:hover {
+/* .mega-menu:hover {
     display: block;
     
 } */
@@ -49,3 +49,7 @@
     display: block;
     
 } */
+
+.badge{
+    top: 20%;
+}

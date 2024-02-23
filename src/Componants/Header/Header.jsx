@@ -55,7 +55,7 @@ const Header = ({ productCount }) => {
                         <Link className="text-decoration-none" to={'/login'}><span className="text-black fw-medium cursor-pointer">Login</span></Link>
                         <i class="bi bi-heart fs-5"></i>
                         <i class="bi bi-bag fs-5 position-relative">
-                            <span class="badge bg-dark text-white rounded-pill position-absolute">{addToCart ? addToCart : 0}</span>
+                            <span class="badge py-1 px-2 fs-7 bg-warning text-black rounded-pill start-100 translate-middle position-absolute">{addToCart}</span>
                         </i>
                     </div>
                 </Container>

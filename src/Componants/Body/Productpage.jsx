@@ -11,7 +11,10 @@ const Productpage = () => {
     const pid = useParams()
     let Id = pid.id
 
-    let productImg = Products[Id]
+    const [male, female] = Products
+
+    let maleProductImg = male.male_items[Id]
+    let femaleProductImg = female.female_items[Id]
 
     const handleClick = () => {
         let prevCount = JSON.parse(localStorage.getItem('counter'))
@@ -25,7 +28,7 @@ const Productpage = () => {
                 <div className="container px-4 px-lg-5">
                     <div className="row gx-4 gx-lg-5">
                         <div className="col-md-6">
-                            <img className="card-img-top mb-5 mb-md-0" src={productImg.img} alt="..." />
+                            <img className="card-img-top mb-5 mb-md-0" src={maleProductImg.img || femaleProductImg} alt="..." />
                         </div>
                         <div className="col-md-6">
                             <div className="small mb-1 mt-3">SKU: BST-498</div>
