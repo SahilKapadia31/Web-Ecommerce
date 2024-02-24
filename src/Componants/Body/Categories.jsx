@@ -7,7 +7,7 @@ import Products from './Img.json'
 const Categories = () => {
 
     const category = useParams()
-    console.log(category.type);
+    console.log(category);
 
     return (
         <div>

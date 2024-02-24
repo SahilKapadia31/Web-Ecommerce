@@ -2,21 +2,27 @@
   {
     "male_items": [
       {
+        "id": "men1",
         "img": "https://images.bewakoof.com/uploads/grid/app/trending-category-icons-OS-T-Shirts-1706511994.jpg"
       },
       {
+        "id": "men2",
         "img": "https://images.bewakoof.com/uploads/grid/app/trending-category-icons-240x350-Classic-Fit-T-Shirts-1707280970.jpg"
       },
       {
+        "id": "men3",
         "img": "https://images.bewakoof.com/uploads/grid/app/unnamed--5--1706513552.jpg"
       },
       {
+        "id": "men4",
         "img": "https://images.bewakoof.com/uploads/grid/app/trending-category-icons-Jeans-1704181405.jpg"
       },
       {
+        "id": "men5",
         "img": "https://images.bewakoof.com/uploads/grid/app/trending-category-icons-Shirts-men--1706511997.jpg"
       },
       {
+        "id": "men6",
         "img": "https://images.bewakoof.com/uploads/grid/app/trending-category-icons-240x350-Co-ords-Men-1707280970.jpg"
       }
     ]
@@ -24,22 +30,52 @@
   {
     "female_items": [
       {
+        "id": "women1",
         "img": "https://images.bewakoof.com/uploads/grid/app/trending-category-icons-Jeans-1706509182.jpg"
       },
       {
+        "id": "women2",
         "img": "https://images.bewakoof.com/uploads/grid/app/trending-category-icons-240x350--2--1706509179.jpg"
       },
       {
+        "id": "women3",
         "img": "https://images.bewakoof.com/uploads/grid/app/trending-category-icons-240x350-Co-ords-1707280972.jpg"
       },
       {
+        "id": "women4",
         "img": "https://images.bewakoof.com/uploads/grid/app/trending-category-icons-Casual-Pants-1706509180.jpg"
       },
       {
+        "id": "women5",
         "img": "https://images.bewakoof.com/uploads/grid/app/3rd-Jan-2024-Oversized-T--shirts-1704270296-1706511259.webp"
       },
       {
+        "id": "women6",
         "img": "https://images.bewakoof.com/uploads/grid/app/3rd-Jan-2024-Dresses-1704270296-1706511533.webp"
+      }
+    ]
+  },
+  {
+    "slider": [
+      {
+        "id": "slide1",
+        "img": "https://images.bewakoof.com/uploads/grid/app/EOSS-1x1-Buy-1get1-free-1-1708439448.jpg"
+      },
+      {
+        "id": "slide2",
+        "img": "https://images.bewakoof.com/uploads/grid/app/YFED-1x1-Superloose-common--1--1708667265.jpg"
+      },
+      {
+        "id": "slide3",
+        "img": "https://images.bewakoof.com/uploads/grid/app/HC-EOSS---1X1-COMMON-1708502982.png"
+      },
+      {
+        "id": "slide4",
+        "img": "https://images.bewakoof.com/uploads/grid/app/HC-BANNERS---1X1-ezgif-com-optimize-1708439449.gif"
+      },
+      {
+        "id": "slide5",
+        "img": "https://images.bewakoof.com/uploads/grid/app/1x1--3--1708693447.gif"
       }
     ]
   }

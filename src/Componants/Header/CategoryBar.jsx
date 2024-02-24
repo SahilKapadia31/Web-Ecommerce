@@ -9,7 +9,7 @@ const CategoryBar = () => {
     }
 
     return (
-        <div className="container-xxl">
+        <div className="container-xxl bg-white">
             <div className='px-4 py-2'>
                 <nav className="nav text-uppercase justify-content-between">
                     <a className="nav-link text-black cursor-pointer">Shop Now</a>
