@@ -9,6 +9,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Login from './Componants/Login & Signup/Login';
 import Signup from './Componants/Login & Signup/Signup';
 import Categories from './Componants/Body/Categories';
+import Result from './Componants/Currency_Converter/Result';
 
 
 
@@ -23,6 +24,7 @@ function App() {
           <Route path='/login' element={<Login />}></Route>
           <Route path='/signup' element={<Signup />}></Route>
           <Route path='/categories/:type' element={<Categories />}></Route>
+          <Route path='/result' element={<Result />}></Route>
         </Routes>
       </BrowserRouter>
     </>

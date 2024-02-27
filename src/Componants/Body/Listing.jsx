@@ -12,7 +12,7 @@ const Listing = () => {
 
     return (
         <div>
-            <div className="d-flex flex-wrap ">
+            <div className="d-flex flex-wrap justify-content-center">
                 {Products && Products.map((product, i) =>
                     <div div className="img" key={i} >
                         {product.male_items && product.male_items.map((x, j) => <img src={x.img} key={j} className='img-fluid cursor-pointer' style={{ width: "226px" }} alt="" onClick={() => handleClick(x.id)} />)}
