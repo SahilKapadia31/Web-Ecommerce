@@ -12,7 +12,7 @@ const CategoryBar = () => {
         <div className="container-xxl bg-white">
             <div className='px-4 py-2'>
                 <nav className="nav text-uppercase justify-content-between">
-                    <a className="nav-link text-black cursor-pointer">Shop Now</a>
+                    <Link to={'/shop'} className="nav-link text-black cursor-pointer">Shop Now</Link>
                     <Link to={'/categories/male_items'} className="nav-link text-black cursor-pointer">Men</Link>
                     <Link to={'/categories/female_items'} className="nav-link text-black cursor-pointer">Women</Link>
                     <a className="nav-link text-black cursor-pointer">Accessories</a>

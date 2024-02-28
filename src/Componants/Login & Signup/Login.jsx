@@ -76,7 +76,7 @@ const Login = () => {
                                                     <input
                                                         type="email"
                                                         name="email"
-                                                        className="form-control border-dark-subtle"
+                                                        className={`form-control focus-ring ${errors.email && touched.email ? "border-danger focus-ring-danger " : "border-dark-subtle"}`}
                                                         id="floatingInputlogin"
                                                         placeholder="name@example.com"
                                                         value={values.email}
@@ -99,7 +99,7 @@ const Login = () => {
                                                     <input
                                                         type="password"
                                                         name="password"
-                                                        className="form-control border-dark-subtle"
+                                                        className={`form-control focus-ring ${errors.password && touched.password ? "border-danger focus-ring-danger " : "border-dark-subtle"}`}
                                                         id="floatingLoginPassword"
                                                         placeholder="Password"
                                                         value={values.password}

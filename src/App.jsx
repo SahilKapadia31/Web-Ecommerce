@@ -10,6 +10,7 @@ import Login from './Componants/Login & Signup/Login';
 import Signup from './Componants/Login & Signup/Signup';
 import Categories from './Componants/Body/Categories';
 import Result from './Componants/Currency_Converter/Result';
+import Shop from './Componants/Body/Shop';
 
 
 
@@ -25,6 +26,7 @@ function App() {
           <Route path='/signup' element={<Signup />}></Route>
           <Route path='/categories/:type' element={<Categories />}></Route>
           <Route path='/result' element={<Result />}></Route>
+          <Route path='/shop' element={<Shop />}></Route>
         </Routes>
       </BrowserRouter>
     </>

@@ -68,7 +68,7 @@ const Signup = () => {
                                                     <input
                                                         type="text"
                                                         name="username"
-                                                        className="form-control border-dark-subtle"
+                                                        className={`form-control focus-ring ${errors.username && touched.username ? "border-danger focus-ring-danger " : "border-dark-subtle"}`}
                                                         id="floatingInputname"
                                                         placeholder="Username"
                                                         value={values.username}
@@ -91,7 +91,7 @@ const Signup = () => {
                                                     <input
                                                         type="email"
                                                         name="email"
-                                                        className="form-control border-dark-subtle"
+                                                        className={`form-control focus-ring ${errors.email && touched.email ? "border-danger focus-ring-danger " : " border-dark-subtle"}`}
                                                         id="floatingInputemail"
                                                         placeholder="name@example.com"
                                                         value={values.email}
@@ -114,7 +114,7 @@ const Signup = () => {
                                                     <input
                                                         type="password"
                                                         name="password"
-                                                        className="form-control border-dark-subtle"
+                                                        className={`form-control focus-ring ${errors.password && touched.password ? "border-danger focus-ring-danger " : "border-dark-subtle"}`}
                                                         id="floatingPassword"
                                                         placeholder="Password"
                                                         value={values.password}
@@ -138,7 +138,7 @@ const Signup = () => {
                                                     <input
                                                         type="password"
                                                         name="confirmPassword"
-                                                        className="form-control border-dark-subtle"
+                                                        className={`form-control focus-ring ${errors.confirmPassword && touched.confirmPassword ? "border-danger focus-ring-danger " : "border-dark-subtle"}`}
                                                         id="floatingConfPassword"
                                                         placeholder="Confirm-password"
                                                         value={values.confirmPassword}
