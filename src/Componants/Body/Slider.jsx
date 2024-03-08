@@ -7,8 +7,6 @@ import Product from './Img.json'
 import 'swiper/css';
 import 'swiper/css/navigation';
 
-// import './styles.css';
-
 // import required modules
 import { Pagination } from 'swiper/modules';
 

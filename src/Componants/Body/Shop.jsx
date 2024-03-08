@@ -2,14 +2,18 @@ import React, { useEffect, useState } from 'react'
 import Header from '../Header/Header';
 import { Link } from 'react-router-dom';
 import Products from '../../assets/Products.json'
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
+import './Body.css'
 
 import axios from 'axios';
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+
+// import required modules
+import { Autoplay, Pagination } from 'swiper/modules';
 
 const Shop = () => {
 
@@ -145,38 +149,41 @@ const Shop = () => {
                         <div className="row row-gap-4">
                             {filterProd && filterProd.map((x) => (
                                 <div className="col-4" key={x._id}>
-                                    <div class="card shadow border-0" >
-                                        <img src={x.productImageURL} alt={x.productImageURL} class="card-img-top img-fluid" style={{ height: '250px' }} />
-                                        <div class="card-body" >
-                                            <h5 class="card-title">{x.productTitle}</h5>
-                                            <p class="card-text text-truncate">{x.productDes}</p>
-                                            <p class="card-text"><small class="text-body-secondary fw-semibold ">{x.categoryID.category}</small></p>
+                                    <div className="card shadow border-0" >
+                                        <div className="product-img" style={{ height: '250px' }}>
+                                            {/* <img src={x.productImageURL} alt={x.productImageURL} className="card-img-top img-fluid" style={{ height: '250px' }} /> */}
+                                            <Swiper
+                                                spaceBetween={30}
+                                                centeredSlides={true}
+                                                autoplay={{
+                                                    delay: 1500,
+                                                    disableOnInteraction: false,
+                                                }}
+                                                pagination={{
+                                                    // clickable: true,
+                                                    dynamicBullets: true,
+                                                }}
+                                                modules={[Autoplay, Pagination]}
+                                                className="mySwiper abc"
+                                            >
+                                                <SwiperSlide>
+                                                    <img src={x.productImageURL} alt={x.productImageURL} className="card-img-top" style={{ height: '250px' }} />
+                                                </SwiperSlide>
+                                                {x.productImages && x.productImages.map((item) => (
+                                                    <SwiperSlide >
+                                                        <img src={item} alt={item} className="card-img-top" style={{ height: '250px' }} />
+                                                    </SwiperSlide>
+                                                ))}
+                                            </Swiper>
+                                        </div>
+                                        <div className="card-body" >
+                                            <h5 className="card-title">{x.productTitle}</h5>
+                                            <p className="card-text text-truncate">{x.productDes}</p>
+                                            <p className="card-text"><small className="text-body-secondary fw-semibold ">{x.categoryID.category}</small></p>
                                             <p className=' fw-bold '>₹ {x.productPrice}</p>
-                                            <a class="btn btn-sm btn-outline-secondary fw-semibold rounded-0">Add to Cart</a>
+                                            <a className="btn btn-sm btn-outline-secondary fw-semibold rounded-0">Add to Cart</a>
                                         </div>
                                     </div>
-                                    {/* <Card className='h-100 shadow '>
-                                        <CardMedia
-                                            component="img"
-                                            alt={altImge}
-                                            height="200"
-                                            image={x.productImageURL || altImge}
-                                        />
-                                        <CardContent>
-                                            <Typography gutterBottom variant="h5" component="div">
-                                                {x.productTitle}
-                                            </Typography>
-                                            <Typography variant="body2" color="text.secondary">
-                                                {x.productDes}
-                                            </Typography>
-                                            <Typography className='mt-3 fw-semibold' variant="body2" color="text.secondary">
-                                                ₹ {x.productPrice}
-                                            </Typography>
-                                        </CardContent>
-                                        <CardActions>
-                                            <Button size="small">Add To Cart</Button>
-                                        </CardActions>
-                                    </Card> */}
                                 </div>
                             ))}
                         </div>
