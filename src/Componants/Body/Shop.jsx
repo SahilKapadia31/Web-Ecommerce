@@ -2,28 +2,33 @@ import React, { useEffect, useState } from 'react'
 import Header from '../Header/Header';
 import { Link } from 'react-router-dom';
 import Products from '../../assets/Products.json'
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
 
 import axios from 'axios';
 
 const Shop = () => {
-    // const [category] = Products
 
     const [prod, setProd] = useState(Products)
-    const [filterProd, setFilterProd] = useState('')
-    const [filterArr, setFilterArr] = useState(Products)
-    const [productList, setproductList] = useState([]);
+    const [filterProd, setFilterProd] = useState([])
+    const [productList, setProductList] = useState([]);
 
     const [category, setCategory] = useState([])
     const [subCategory, setSubCategory] = useState([])
 
-    const [x, y] = useState([])
+    const [selectedCheckboxes, setSelectedCheckboxes] = useState([]);
 
+    let altImge = 'https://images.bewakoof.com/t640/men-s-green-watching-you-change-colours-graphic-printed-oversized-t-shirt-592039-1700550347-1.jpg'
 
     const useProduct = async () => {
         try {
-            const response = await axios.get("http://192.168.1.12:3003/api/getproduct");
-            setproductList(response.data);
-            // console.log(subcategoryData)
+            const response = await axios.get("http://192.168.1.8:3003/api/getproduct");
+            setProductList(response.data);
+            setFilterProd(response.data);
         } catch (error) {
             console.error("Error fetching data:", error);
         }
@@ -31,7 +36,7 @@ const Shop = () => {
 
     const getCategory = async () => {
         try {
-            const response = await axios.get("http://192.168.1.12:3003/api/getcategory");
+            const response = await axios.get("http://192.168.1.8:3003/api/getcategory");
             setCategory(response.data);
         } catch (error) {
             console.error("Error fetching data:", error);
@@ -40,7 +45,7 @@ const Shop = () => {
 
     const getSubCategory = async () => {
         try {
-            const response = await axios.get("http://192.168.1.12:3003/api/getsubcategory");
+            const response = await axios.get("http://192.168.1.8:3003/api/getsubcategory");
             setSubCategory(response.data);
         } catch (error) {
             console.error("Error fetching data:", error);
@@ -57,39 +62,35 @@ const Shop = () => {
         setSubCategory(cs_list)
     }, [])
 
-    // useEffect(() => {
-    //     if (filterProd) {
-    //         const Items = prod.map(x => x.items.reduce((acc, item) => {
-    //             if (item.gender === filterProd) {
-    //                 acc.push(item);
-    //             }
-    //             return acc;
-    //         }, []));
-
-    //         const flattenedItems = Items.flat();
-    //         console.log(flattenedItems);
-
-    //         let abc = prod.filter((x) => x.category == filterProd)
-    //         console.log(abc);
-    //         setFilterArr(prod.filter((x) => x.category == filterProd) || flattenedItems)
-    //     }
-
-    // }, [filterProd])
-
-    const handleClick = (e, item, i) => {
-
-        let toFilter = e.target.value
-        console.log(item);
-        let abc = category.map((x) => x.isSelected == item.isSelected ? !x.isSelected : x.isSelected)
-        // setCategory(abc)
-
-        setFilterProd(toFilter)
+    const handleClick = (item) => {
+        if (item.category !== undefined) {
+            if (selectedCheckboxes.includes(item.category)) {
+                let filters = selectedCheckboxes.filter((x) => x !== item.category);
+                setSelectedCheckboxes(filters)
+            } else {
+                setSelectedCheckboxes([...selectedCheckboxes, item.category])
+            }
+        }
+        else {
+            setFilterProd([...productList]);
+        }
     }
 
-    const handleProduct = (i) => {
-        navigate(`/Productpage/${i}`)
-    }
+    useEffect(() => {
+        filterItems();
+    }, [selectedCheckboxes]);
 
+    const filterItems = () => {
+        if (selectedCheckboxes.length > 0) {
+            let tempItems = selectedCheckboxes.map((selectedCategory) => {
+                let temp = productList.filter((x) => x.categoryID.category == selectedCategory);
+                return temp;
+            });
+            setFilterProd(tempItems.flat());
+        } else {
+            setFilterProd([...productList]);
+        }
+    }
 
     return (
         <>
@@ -105,7 +106,7 @@ const Shop = () => {
                     <div className="col-12">
                         <h3 className='fw-semibold'>New Arrivals </h3>
                     </div>
-                    <div className="col-4 p-3">
+                    <div className="col-3 p-3">
                         <div className="mt-3 fs-7 text-uppercase text-secondary fw-semibold">Filters</div>
                         <div className="mt-3">
                             <span className='fw-medium'>Gender</span>
@@ -113,7 +114,7 @@ const Shop = () => {
                                 {category && category.map((x, i) => (
                                     <li className=' text-secondary ps-2 fw-medium' key={x._id} >
                                         <div className="form-check ">
-                                            <input className="form-check-input border-secondary-subtle cursor-pointer" type="checkbox" value='' id="flexCheck" onClick={(e) => handleClick(e, x, i)} />
+                                            <input className="form-check-input border-secondary-subtle cursor-pointer" type="checkbox" value='' id="flexCheck" onClick={(e) => handleClick(x)} />
                                             <label className="form-check-label cursor-pointer" htmlFor="flexCheck">
                                                 {x.category}
                                             </label>
@@ -140,36 +141,42 @@ const Shop = () => {
                             </ul>
                         </div>
                     </div>
-                    <div className="col-8">
+                    <div className="col-9">
                         <div className="row row-gap-4">
-                            {/* {filterArr && filterArr.map(prodcut => (
-                                prodcut.category == filterProd ?
-                                    prodcut.items.map(item => (
-                                        <div className="col-4" key={item.img}>
-                                            <img className='img-fluid cursor-pointer' src={item.img} alt={item.img} onClick={() => handleProduct(item)} />
-                                        </div>
-                                    )) :
-                                    prodcut.items.map(item => (
-                                        <div className="col-4" key={item.img}>
-                                            <img className='img-fluid cursor-pointer' src={item.img} alt={item.img} onClick={() => handleProduct(item)} />
-                                        </div>
-                                    ))
-                            )
-                            )} */}
-
-                            {productList && productList.map((x) => (
+                            {filterProd && filterProd.map((x) => (
                                 <div className="col-4" key={x._id}>
-                                    <div className="h-100 shadow rounded p-3">
-                                        <div className="h-50">
-                                            <img className='img-fluid rounded cursor-pointer h-100 w-100'
-                                                src={x.productImageURL} alt={x.productImageURL} />
-                                        </div>
-                                        <div className="h-50">
-                                            <h5>{x.productTitle}</h5>
-                                            <p>{x.productDes} </p>
+                                    <div class="card shadow border-0" >
+                                        <img src={x.productImageURL} alt={x.productImageURL} class="card-img-top img-fluid" style={{ height: '250px' }} />
+                                        <div class="card-body" >
+                                            <h5 class="card-title">{x.productTitle}</h5>
+                                            <p class="card-text text-truncate">{x.productDes}</p>
+                                            <p class="card-text"><small class="text-body-secondary fw-semibold ">{x.categoryID.category}</small></p>
                                             <p className=' fw-bold '>₹ {x.productPrice}</p>
+                                            <a class="btn btn-sm btn-outline-secondary fw-semibold rounded-0">Add to Cart</a>
                                         </div>
                                     </div>
+                                    {/* <Card className='h-100 shadow '>
+                                        <CardMedia
+                                            component="img"
+                                            alt={altImge}
+                                            height="200"
+                                            image={x.productImageURL || altImge}
+                                        />
+                                        <CardContent>
+                                            <Typography gutterBottom variant="h5" component="div">
+                                                {x.productTitle}
+                                            </Typography>
+                                            <Typography variant="body2" color="text.secondary">
+                                                {x.productDes}
+                                            </Typography>
+                                            <Typography className='mt-3 fw-semibold' variant="body2" color="text.secondary">
+                                                ₹ {x.productPrice}
+                                            </Typography>
+                                        </CardContent>
+                                        <CardActions>
+                                            <Button size="small">Add To Cart</Button>
+                                        </CardActions>
+                                    </Card> */}
                                 </div>
                             ))}
                         </div>

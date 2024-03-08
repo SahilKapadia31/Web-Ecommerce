@@ -24,7 +24,7 @@ const Megamenu = ({ activeTab }) => {
                                                                     {item.name}
                                                                 </a>
                                                                 {item.types && item.types.map((type, k) =>
-                                                                    <a className="nav-link py-1 text-secondary fs-7" key={k}>
+                                                                    <a className="nav-link py-1 text-secondary fs-7 cursor-pointer" key={k}>
                                                                         {type}
                                                                     </a>
                                                                 )}
@@ -89,7 +89,7 @@ const Megamenu = ({ activeTab }) => {
                                                                     {item.name}
                                                                 </a>
                                                                 {item.types && item.types.map((type, k) =>
-                                                                    <a className="nav-link py-1 text-secondary fs-7" key={k}>
+                                                                    <a className="nav-link py-1 text-secondary fs-7 cursor-pointer" key={k}>
                                                                         {type}
                                                                     </a>
                                                                 )}
@@ -157,7 +157,7 @@ const Megamenu = ({ activeTab }) => {
                                                                     {item.name}
                                                                 </a>
                                                                 {item.models && item.models.map((model, k) =>
-                                                                    <a className="nav-link py-1 text-secondary fs-7" key={k}>
+                                                                    <a className="nav-link py-1 text-secondary fs-7 cursor-pointer" key={k}>
                                                                         {model}
                                                                     </a>
                                                                 )}
