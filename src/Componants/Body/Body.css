@@ -1,13 +1,15 @@
 
-
- /* .mySwiper{
-    display: none;
-} 
-
-.product-img:hover .card-img-top {
-    display: none;
+.product-img{
+    position: relative;
 }
 
-.product-img:hover .mySwiper {
-    display: block;
-} */
+.mySwiper{
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    transition: z-index .5s ease, transform .6s ease;
+}
+
+.product-img:hover .mySwiper{
+    z-index: 0;
+}

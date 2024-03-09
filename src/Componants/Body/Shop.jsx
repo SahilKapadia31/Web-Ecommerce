@@ -13,7 +13,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 // import required modules
-import { Autoplay, Pagination } from 'swiper/modules';
+import { Autoplay } from 'swiper/modules';
 
 const Shop = () => {
 
@@ -145,26 +145,23 @@ const Shop = () => {
                             </ul>
                         </div>
                     </div>
-                    <div className="col-9">
+                    <div className="col-9 pb-5">
                         <div className="row row-gap-4">
                             {filterProd && filterProd.map((x) => (
                                 <div className="col-4" key={x._id}>
                                     <div className="card shadow border-0" >
                                         <div className="product-img" style={{ height: '250px' }}>
-                                            {/* <img src={x.productImageURL} alt={x.productImageURL} className="card-img-top img-fluid" style={{ height: '250px' }} /> */}
+                                            <img src={x.productImageURL} alt={x.productImageURL} className="card-img-top img-fluid" style={{ height: '250px' }} />
                                             <Swiper
                                                 spaceBetween={30}
                                                 centeredSlides={true}
+                                                loop={true}
                                                 autoplay={{
                                                     delay: 1500,
                                                     disableOnInteraction: false,
                                                 }}
-                                                pagination={{
-                                                    // clickable: true,
-                                                    dynamicBullets: true,
-                                                }}
-                                                modules={[Autoplay, Pagination]}
-                                                className="mySwiper abc"
+                                                modules={[Autoplay]}
+                                                className="mySwiper"
                                             >
                                                 <SwiperSlide>
                                                     <img src={x.productImageURL} alt={x.productImageURL} className="card-img-top" style={{ height: '250px' }} />
@@ -178,7 +175,7 @@ const Shop = () => {
                                         </div>
                                         <div className="card-body" >
                                             <h5 className="card-title">{x.productTitle}</h5>
-                                            <p className="card-text text-truncate">{x.productDes}</p>
+                                            <p className="card-text text-truncate" title={x.productDes}>{x.productDes}</p>
                                             <p className="card-text"><small className="text-body-secondary fw-semibold ">{x.categoryID.category}</small></p>
                                             <p className=' fw-bold '>₹ {x.productPrice}</p>
                                             <a className="btn btn-sm btn-outline-secondary fw-semibold rounded-0">Add to Cart</a>
