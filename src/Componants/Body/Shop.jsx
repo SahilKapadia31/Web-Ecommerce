@@ -26,8 +26,6 @@ const Shop = () => {
 
     const [selectedCheckboxes, setSelectedCheckboxes] = useState([]);
 
-    let altImge = 'https://images.bewakoof.com/t640/men-s-green-watching-you-change-colours-graphic-printed-oversized-t-shirt-592039-1700550347-1.jpg'
-
     const useProduct = async () => {
         try {
             const response = await axios.get("http://192.168.1.8:3003/api/getproduct");
