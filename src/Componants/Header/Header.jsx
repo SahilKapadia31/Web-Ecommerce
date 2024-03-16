@@ -18,6 +18,9 @@ const Header = ({ productCount }) => {
         navigate('/')
     }
 
+    const navigateToCart = () => {
+        navigate('/cart')
+    }
     const navItems = ["Men", "Women", "Mobile Covers"]
 
     const handleTabHover = (item) => {
@@ -54,7 +57,7 @@ const Header = ({ productCount }) => {
                     <div className="fs-7 d-flex align-items-center gap-3">
                         <Link className="text-decoration-none" to={'/login'}><span className="text-black fw-medium cursor-pointer">Login</span></Link>
                         <i class="bi bi-heart fs-5"></i>
-                        <i class="bi bi-bag fs-5 position-relative">
+                        <i class="bi bi-bag fs-5 position-relative cursor-pointer" onClick={navigateToCart}>
                             <span class="badge py-1 px-2 fs-7 bg-warning text-black rounded-pill start-100 translate-middle position-absolute">{addToCart}</span>
                         </i>
                     </div>

@@ -10,7 +10,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
 import 'swiper/css';
-import 'swiper/css/pagination';
 
 // import required modules
 import { Autoplay } from 'swiper/modules';
@@ -28,7 +27,7 @@ const Shop = () => {
 
     const useProduct = async () => {
         try {
-            const response = await axios.get("http://192.168.1.8:3003/api/getproduct");
+            const response = await axios.get("http://192.168.1.5:3003/api/getproduct");
             setProductList(response.data);
             setFilterProd(response.data);
         } catch (error) {
@@ -38,7 +37,7 @@ const Shop = () => {
 
     const getCategory = async () => {
         try {
-            const response = await axios.get("http://192.168.1.8:3003/api/getcategory");
+            const response = await axios.get("http://192.168.1.5:3003/api/getcategory");
             setCategory(response.data);
         } catch (error) {
             console.error("Error fetching data:", error);
@@ -47,7 +46,7 @@ const Shop = () => {
 
     const getSubCategory = async () => {
         try {
-            const response = await axios.get("http://192.168.1.8:3003/api/getsubcategory");
+            const response = await axios.get("http://192.168.1.5:3003/api/getsubcategory");
             setSubCategory(response.data);
         } catch (error) {
             console.error("Error fetching data:", error);
@@ -159,7 +158,7 @@ const Shop = () => {
                                                     disableOnInteraction: false,
                                                 }}
                                                 modules={[Autoplay]}
-                                                className="mySwiper"
+                                                className="mySwiper product-slider"
                                             >
                                                 <SwiperSlide>
                                                     <img src={x.productImageURL} alt={x.productImageURL} className="card-img-top" style={{ height: '250px' }} />

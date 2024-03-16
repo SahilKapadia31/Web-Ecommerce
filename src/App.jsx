@@ -11,6 +11,7 @@ import Signup from './Componants/Login & Signup/Signup';
 import Categories from './Componants/Body/Categories';
 import Result from './Componants/Currency_Converter/Result';
 import Shop from './Componants/Body/Shop';
+import Cart from './Componants/Body/Cart';
 
 
 
@@ -27,6 +28,7 @@ function App() {
           <Route path='/categories/:type' element={<Categories />}></Route>
           <Route path='/result' element={<Result />}></Route>
           <Route path='/shop' element={<Shop />}></Route>
+          <Route path='/cart' element={<Cart />}></Route>
         </Routes>
       </BrowserRouter>
     </>

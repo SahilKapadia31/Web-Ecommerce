@@ -15,7 +15,6 @@ export default function Slider() {
     const [male, female, slider] = Product
 
     let slide = slider.slider
-    console.log(slide);
     return (
         <>
             <Swiper
